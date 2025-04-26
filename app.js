@@ -14,7 +14,7 @@ input.addEventListener("keyup", async function (event) {
       );  
       let data = await api.json();  
 
-      if (input.value == ""){ 
+      if (input.value == ""){  
         main1.innerHTML = `<div class = "city1"> PLEASE ENTER CITY </div>`;  
         lastCity = "";  
         input.value = "";   
@@ -57,14 +57,15 @@ input.addEventListener("keyup", async function (event) {
         lastCity = cityName;
         input.value = "";
       }
-    } else {
-      console.log("api is not call");
-      input.value = "";  
+    } else { 
       if (input.value == ""){ 
         main1.innerHTML = `<div class = "city1"> PLEASE ENTER CITY </div>`;  
         lastCity = "";  
         input.value = "";   
-      } 
+      } else{
+        console.log("api is not call");
+        input.value = ""; 
+      }
       
     }
   }
@@ -122,13 +123,14 @@ search.addEventListener("click", async function () {
       input.value = "";
     }
   } else {
-    console.log("API IS NOT CALL"); 
-    input.value = "";  
-
     if (input.value == "") {
       main1.innerHTML = `<div class = "city1"> PLEASE ENTER CITY </div>`;
       lastCity = ""; 
       input.value = ""; 
+    }
+    else{
+      console.log("API IS NOT CALL"); 
+      input.value = "";  
     }
   }
   // console.log(event.target.value);

@@ -80,7 +80,7 @@ body {
 }
 .main{
     transform: translateY(-200px); 
-    transition: 1s all linear; 
+    transition: 0.5s all linear; 
 }
 
 .img-box{
@@ -97,6 +97,7 @@ body {
 .type{
     font-size: 20px; 
     font-weight: 500;
+    
 } 
 
 .type1{
